@@ -1,0 +1,188 @@
+@fontfamily:monospace;
+@fontsize:15px;
+@float:left;
+@display:inline-block;
+@cursor:pointer;
+@fontweight:bold;
+
+.wrapper{
+    width: 100%;
+    margin: 10px auto;
+}
+.container{
+    width: 70%;
+    margin: 20px auto;
+    position: relative;
+}
+.gameboard{
+    float: @float;
+    margin: 10px 20px;
+}
+.infoboard{
+    float: @float;
+    width: 300px;
+    margin: 10px;
+}
+h1{ 
+    margin:0px;
+}
+.info{
+    margin-left:25px;
+    p{
+        font-family: @fontfamily;
+        font-size:@fontsize;
+        margin:0px;
+    }
+}
+.restart{
+    background:#fff;
+    border:1px solid #ccc;
+    font-size:@fontsize;
+    padding:10px 20px;
+    margin: 10px 0px 0px 25px;
+    cursor:@cursor;
+}
+.card_container span{
+    display: @display;
+    width:80px;
+    height:100px;
+    text-indent: -999px;
+    cursor: @cursor;
+    opacity: 0.5;
+}
+.maroon_card.active {
+    background:url(../img/colour1.gif);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.yellow_card.active {
+    background:url(../img/colour2.gif);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.pgreen_card.active {
+    background:url(../img/colour3.gif);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.green_card.active {
+    background:url(../img/colour4.gif);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.sblue_card.active {
+    background:url(../img/colour5.gif) !important;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.blue_card.active {
+    background:url(../img/colour6.gif);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.pink_card.active {
+    background:url(../img/colour7.gif);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.red_card.active {
+    background:url(../img/colour8.gif);
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.card {
+    background:url(../img/card_bg.gif);
+    background-repeat: no-repeat;
+    border:1px solid #ccc;
+}
+.card.cfocus {
+    opacity: 1;
+    background-color:#f5f5f5 !important;
+}
+.card.disabled {
+    background: 0 none;
+}
+.overlay{
+    background:#ccc;
+    position: fixed;
+    width:50%;
+    height:70%;
+    left:225px;
+    right:0;
+    bottom:0;
+    top:0;
+    opacity:0.6;
+    display:none;
+}
+table.highscore-board{
+    clear: both;
+    margin: 20px;
+    float: left;
+    width: 100%;
+    border: 1px solid #ccc;
+    th, td {
+        padding:5px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+        background: #f5f5f5;
+    }
+    tr {
+        border: 1px solid #ccc;
+        &:last-child {
+            td {
+                border-bottom: none; 
+            }
+        }
+    }
+}
+.popup {
+    position: absolute;
+    z-index: 1;
+    left: 70px;
+    top:150px;
+    display:none;
+    border: 1px solid #fff;
+    padding: 20px;
+    background: green;
+    opacity: 1;
+    
+    .feild-container{
+        margin-top: 15px;
+    }
+    input#username {
+        background: 0 none;
+        border: 1px solid #fff;
+        font-size: @fontsize;
+        color: #fff;
+        display: @display;
+        margin-left:15px;
+    }
+    input#email{
+        background: 0 none;
+        border: 1px solid #fff;
+        font-size: @fontsize;
+        color: #fff;
+        display: @display;
+    }
+    #go {
+        display: @display;
+        margin-left:10px;
+        border:1px solid #fff;
+        background:#fff;
+        color:#ccc;
+        padding:5px 15px;
+        font-size: 18px;
+        font-weight: @fontweight;
+        font-family: @fontfamily;
+        float: right;
+        margin-top: 15px;
+    }
+    label {
+        font-size: 24px;
+        font-weight:@fontweight;
+        font-family: @fontfamily;
+        display: @display;
+        color:#fff;
+    }
+}

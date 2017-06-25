@@ -1,0 +1,23 @@
+{
+  "name": "colormemory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HemanthaKumari",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.10",
+    "hapi": "^16.4.3",
+    "inert": "^4.2.0",
+    "mongoose": "^4.11.0",
+    "vision": "^4.1.1"
+  }
+}

@@ -1,0 +1,73 @@
+
+<div class="wrapper">
+    <div class="container">
+        <div class="gameboard">
+            <div id="row1" class="card_container">
+                <span class="card yellow_card">yellow</span>
+                <span class="card pink_card">pink</span>
+                <span class="card green_card">green</span>
+                <span class="card red_card">red</span>
+            </div>
+            <div id="row2" class="card_container">
+                <span class="card sblue_card">sblue</span>
+                <span class="card blue_card">blue</span>
+                <span class="card yellow_card">yellow</span>
+                <span class="card maroon_card">maroon</span>
+            </div>
+            <div id="row3" class="card_container">
+                <span class="card pgreen_card">pgreen</span>
+                <span class="card pink_card">pink</span>
+                <span class="card red_card">red</span>
+                <span class="card maroon_card">maroon</span>
+            </div>
+            <div id="row4" class="card_container">
+                <span class="card green_card">green</span>
+                <span class="card sblue_card">sblue</span>
+                <span class="card pgreen_card">pgreen</span>
+                <span class="card blue_card">blue</span>
+            </div>
+            <!--<div id="row1" class="card_container">
+            </div>
+            <div id="row2" class="card_container">
+            </div>
+            <div id="row3" class="card_container">
+            </div>
+            <div id="row4" class="card_container">
+            </div>--->
+        </div>
+        <div class="infoboard">
+            <h1><img src="/img/logo.png" /></h1>
+            <div class="info">
+                <p>The player is to flip two of these upwards each round, trying to find equals. If the two cards are equal, the player receives one point, and the cards are removed from the game board. Otherwise, the player loses one point and the cards are turned face-down again. This continues until all pairs have been found.
+                </p>
+                <h2>Score: <span id="score">0</span></h2>
+            </div>
+            <input type="button" value="Restart game" class="restart"/>
+        </div>
+        <table class="highscore-board">
+            <thead><tr><th>User Name</th><th>Email</th><th>High Score</th></tr></thead>
+            <tbody>
+                {{#each data}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.highScore}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <div class="overlay"></div>
+        <div class="popup">
+            <div class="feild-container">
+                <label>Enter your Name:</label> 
+                <input type="text" id="username" /> 
+            </div>
+            <div class="feild-container">
+                <label>Enter your Email:</label> 
+                <input type="email" id="email" />
+            </div>
+            <input type="button" value="Submit" id="go" />
+        </div>
+    </div>
+</div>
+  
