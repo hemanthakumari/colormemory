@@ -3,3 +3,11 @@
 3. open the command prompt in mongodb --> bin folder and run the command "mongod" to run the server.
 4. copy the data-stores/scores.js file into mongodb bin folder
 5. open the new command window in mongodb bin folder and run the command mongo "localhost:27017/cmemory scores.js" to dump the sample data.
+
+
+git
+--------------------------
+1. git status 
+2. git add <file path>
+3. git commit -m "<commit_MSG>"
+4. git push

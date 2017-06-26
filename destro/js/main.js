@@ -1,25 +1,33 @@
 (function(){
     
-    /*function shuffleArray(){
+    function shuffleArray(){
         var temp = [];
         var allColors = ['yellow','pink','green','red','sblue','blue','pgreen','maroon'];
-        for(var i=allColors.length-1; i>0 ; i--){
+        var duplicate = [];
+        var dupString = "";
+        
+        /* removing classes of cards */
+        
+        for(var m=0; m<=allColors.length; m++) {
+            $('.card_container').find('span.card').removeClass(allColors[m]+'_card');
+        }
+        
+        /* shuffling array items and adding classes to the elements */
+        
+       for(var i=allColors.length-1; i>0 ; i--) {
             var j = Math.floor(Math.random()* (i+1));
             temp = allColors[i];
             allColors[i] = allColors[j];
-            allColors[j] = temp;
-              
+            allColors[j] = temp;   
         }
-        //return allColors; 
-        for(var l=1; l<=4 ; l++ ){
-            for(var k = 0; k<4 ; k++){
-                console.log(allColors[k]);
-                $('#row'+l).append("<span class=card " + allColors[k] +"_card>" +allColors[k]+ "</span>");
-            }
-            
+        dupString = allColors.join(",");
+        var duplicate = allColors.concat(dupString.split(","));
+        console.log(duplicate);
+        for( var n=0; n<=duplicate.length; n++){
+            $('.gameboard').find('span.card').eq(n).addClass(duplicate[n] +'_card');
         }
-        
-    }*/
+        $('.restart').blur();
+    }
     
     var colCount = 1;
     var rowCount = 1;
@@ -83,6 +91,7 @@
     function resetgame(){ 
         var con = confirm("Do you want to reset the Game?");
         if (con) {
+            shuffleArray();
             colCount = 1;
             rowCount = 1;
             selected = 0;
@@ -98,7 +107,5 @@
      $(document).on('click','.restart', function(e){
         resetgame();
      });
-    
-    shuffleArray();
     
 })();
